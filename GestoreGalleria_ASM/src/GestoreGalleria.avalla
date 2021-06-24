@@ -1,0 +1,54 @@
+scenario GestoreGalleria
+load GestoreGalleria.asm
+check appling = false;
+set override := false;
+set sensore1 := NOTRAFFIC;
+set sensore2 := NOTRAFFIC;
+set sensore3 := NOTRAFFIC;
+step
+check appling = false;
+check semaforo = VERDE;
+set override := false;
+set sensore1 := MODERATE;
+set sensore2 := NOTRAFFIC;
+set sensore3 := MODERATE;
+step
+check appling = false;
+check semaforo = GIALLOLAMP;
+set override := false;
+set sensore1 := NOTRAFFIC;
+set sensore2 := MODERATE;
+set sensore3 := NOTRAFFIC;
+step
+check appling = false;
+check semaforo = VERDE;
+set override := false;
+set sensore1 := STANDING;
+set sensore2 := STANDING;
+set sensore3 := MODERATE;
+step
+check appling = true;
+check semaforo = GIALLO;
+set override := false;
+set sensore1 := STANDING;
+set sensore2 := STANDING;
+set sensore3 := MODERATE;
+step
+check appling = false;
+check semaforo = ROSSO;
+set override := false;
+set sensore1 := NOTRAFFIC;
+set sensore2 := NOTRAFFIC;
+set sensore3 := NOTRAFFIC;
+step
+check appling = false;
+check semaforo = VERDE;
+set override := true;
+set sensore1 := NOTRAFFIC;
+set sensore2 := NOTRAFFIC;
+set sensore3 := NOTRAFFIC;
+set semaforo_Override := GIALLOLAMP;
+step
+check appling = false;
+check semaforo = GIALLOLAMP;
+step
