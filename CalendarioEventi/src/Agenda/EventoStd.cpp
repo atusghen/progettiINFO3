@@ -1,10 +1,3 @@
-/*
- * EventoStd.cpp
- *
- *  Created on: 28 gen 2021
- *      Author: greco
- */
-
 #include "EventoStd.h"
 
 EventoStd::EventoStd() {

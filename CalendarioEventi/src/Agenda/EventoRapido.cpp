@@ -1,15 +1,10 @@
-/*
- * EventoStd.cpp
- *
- *  Created on: 28 gen 2021
- *      Author: greco
- */
-
 #include "EventoRapido.h"
+#include "Evento.h"
 
 EventoRapido::EventoRapido() {
 	nome="";
 	data="";
+
 }
 EventoRapido::EventoRapido(string a, string b) {
 	nome=a;
