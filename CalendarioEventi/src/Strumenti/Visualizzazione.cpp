@@ -1,5 +1,5 @@
 #include "Visualizzazione.h"
-//#include "../Agenda/EventoStd.h"
+#include "../Agenda/EventoStd.h"
 #include "../Agenda/Agenda.h"
 
 
@@ -63,13 +63,13 @@ void Visualizzazione::printYear(string anno)
 {
 	Agenda::getAgendaIstance();
 	Anno* a=new Anno(anno);
-	for(int i=0;i<12;i++)
+	for(int i=1;i<13;i++)
 	{
-		cout<<"		"<<a->getMonth(i)->getName()<<" "<<to_string(a->numAnno())<<"		"<<endl;
+		cout<<"		"<<a->getMonth(i-1)->getName()<<" "<<to_string(a->numAnno())<<"		"<<endl;
 		cout<<"lun	mar	mer	gio	ven	sab	dom"<<endl;
 		int posizione=0;
 		do{
-			if(Giorno::giorni[posizione]==a->getMonth(i)->getFirstDay()->getName())
+			if(Giorno::giorni[posizione]==a->getMonth(i-1)->getFirstDay()->getName())
 				{break;}
 				else
 				{posizione++;}
@@ -86,7 +86,7 @@ void Visualizzazione::printYear(string anno)
 		case 6: cout<<"						"; break;
 		}
 
-		for(int k=1;k<=Mese::numgg[i];k++)
+		for(int k=1;k<=Mese::numgg[i-1];k++)
 		{
 			string mese=""; string giorno="";
 			if(i>0 && i<10){mese="0"+to_string(i);}else{mese=to_string(i);}

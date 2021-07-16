@@ -52,13 +52,14 @@ void Agenda::inserisciEvento()
 	switch (i)
 	{
 	case 1:
-		istanza->vectAgenda.emplace_back(EventoRapido::creaEvento()); break;
+		//istanza->vectAgenda.emplace_back(EventoRapido::creaEvento()); break;
+		istanza->vectAgenda.emplace_back(Evento<EventoRapido>::creaEvento()); break;
 	case 2:
-		istanza->vectAgenda.emplace_back(Anniversario::creaEvento()); break;
+		istanza->vectAgenda.emplace_back(Evento<Anniversario>::creaEvento()); break;
 	case 3:
-		istanza->vectAgenda.emplace_back(EventoStd::creaEvento()); break;
+		istanza->vectAgenda.emplace_back(Evento<EventoStd>::creaEvento()); break;
 	case 4:
-		istanza->vectAgenda.emplace_back(Compleanno::creaEvento()); break;
+		istanza->vectAgenda.emplace_back(Evento<Compleanno>::creaEvento()); break;
 	default:
 		cout<<"scelta non valida"<<endl; break;
 	}

@@ -8,11 +8,12 @@
 class Compleanno: public EventoStd, public Anniversario
 {
 public:
-	static EventoStd* creaEvento();
+	static Compleanno* creaEvento();
+	virtual ~Compleanno();
 protected:
 	Compleanno();
 	Compleanno(string a, string b, string c, int d, bool e, string f, string g);
-	virtual ~Compleanno();
+
 
 };
 

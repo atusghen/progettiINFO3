@@ -30,7 +30,7 @@ delete &luogo;
 delete &descrizione;
 }
 
-EventoStd* Compleanno::creaEvento()
+Compleanno* Compleanno::creaEvento()
 {
 	string nome="";
 	string	data="";

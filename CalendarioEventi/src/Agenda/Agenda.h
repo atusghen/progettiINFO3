@@ -1,8 +1,9 @@
 #ifndef AGENDA_AGENDA_H_
 #define AGENDA_AGENDA_H_
 
-//#include "EventoRapido.h"
-//#include "EventoStd.h"
+#include "EventoRapido.h"
+#include "EventoStd.h"
+#include "Evento.h"
 #include "Compleanno.h"
 #include<iostream>
 #include<vector>

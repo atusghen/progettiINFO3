@@ -1,4 +1,6 @@
 #include "Strumenti/Visualizzazione.h"
+//#include "Agenda/Evento.h"
+//#include "Agenda/EventoStd.h"
 
 int main(void)
 {
